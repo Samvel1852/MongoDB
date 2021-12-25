@@ -1,0 +1,21 @@
+Create an insert user script --- db.tasks.insertOne({name: "Gor", surname: "Qeryan", sex: "male"})
+
+Create update user’s name script for given _id --- db.users.update({_id: ObjectId("61c728d12ad9c0d8760a10ba")}, {$set:{name: "Hamlet"}})
+
+Create get all users script (retrieving the only username) and sorted by username --- db.users.find({}, {_id: 0, name: 1}).sort({name: 1})
+
+Create a script that returns only female users --- db.users.find({sex: "female"})
+
+Create a script to update all tasks completed = false --- db.tasks.updateMany({}, {$set:{completed: false}})
+
+Create a script to delete all tasks that have been created yesterday --- db.tasks.remove({created: `${(new Date() - 86400000).getFullYear()}-${(new Date() - 86400000).getMonth() + 1}-${(new Date() - 86400000).getDate()}`})
+
+Create a script to get all tasks of user sorted by created date that are not completed. --- db.tasks.find({completed: false}).sort({created: 1})
+
+
+
+
+
+
+
+{title: "Learn JS", text: "JS is a high level frontend programming language", completed: false, created: `${(new Date()).getFullYear()}-${(new Date()).getMonth() + 1}-${(new Date()).getDate()}`}
