@@ -6,7 +6,7 @@ Create get all users script (retrieving the only username) and sorted by usernam
 
 Create a script that returns only female users --- db.users.find({sex: "female"})
 
-Create a script to update all tasks completed = false --- db.tasks.updateMany({}, {$set:{completed: false}})
+Create a script to update all tasks completed = false --- db.users.updateMany({}, {$set: {"tasks.$[].completed": false}})
 
 Create a script to delete all tasks that have been created yesterday --- db.tasks.remove({created: `${(new Date() - 86400000).getFullYear()}-${(new Date() - 86400000).getMonth() + 1}-${(new Date() - 86400000).getDate()}`})
 
