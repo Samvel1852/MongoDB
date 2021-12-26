@@ -1,4 +1,9 @@
-Create an insert user script --- db.users.insertOne({name: "Gor", surname: "Qeryan", sex: "male"})
+Create an insert user script --- db.users.insertOne({name: "Gor", surname: "Qeryan", sex: "male", tasks:[{
+    title: "Learn JS",
+    text: "JS is a high level frontend programming language",
+    completed: true,
+    created: `${(new Date(Date.now() - 86400000)).getFullYear()}-${(new Date(Date.now() - 86400000)).getMonth() + 1}-${(new Date(Date.now() - 86400000)).getDate()}`
+}]})
 ***********************************************
 Create update user’s name script for given _id --- db.users.update({_id: ObjectId("61c728d12ad9c0d8760a10ba")}, {$set:{name: "Hamlet"}})
 ******************************************
