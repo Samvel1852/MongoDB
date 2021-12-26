@@ -1,6 +1,6 @@
 Create an insert user script --- db.users.insertOne({name: "Gor", surname: "Qeryan", sex: "male", tasks:[{
     title: "Learn JS",
-    text: "JS is a high level frontend programming language",
+    text: "JS is a high level programming language",
     completed: true,
     created: `${(new Date(Date.now() - 86400000)).getFullYear()}-${(new Date(Date.now() - 86400000)).getMonth() + 1}-${(new Date(Date.now() - 86400000)).getDate()}`
 }]})
